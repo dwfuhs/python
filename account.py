@@ -1,9 +1,9 @@
 class Account:
-    def __init__(self, name):
+    def __init__(self, name: str) -> None:
         self.__account_name = name
         self.__account_balance = 0
 
-    def deposit(self, amount):
+    def deposit(self, amount: float) -> bool:
         """
         Adds amount of deposit to account balance
         :param amount: amount of deposit
@@ -15,7 +15,7 @@ class Account:
         else:
             return False
 
-    def withdraw(self, amount):
+    def withdraw(self, amount: float) -> bool:
         """
         Subtracts amount of withdraw from account balance
         :param amount: amount of withdraw
@@ -29,8 +29,16 @@ class Account:
             self.__account_balance -= amount
             return True
 
-    def get_balance(self):
+    def get_balance(self) -> float:
+        """
+        Returns account balance
+        :return: account balance
+        """
         return self.__account_balance
 
-    def get_name(self):
+    def get_name(self) -> str:
+        """
+        Retrieves account holders name
+        :return: account name
+        """
         return self.__account_name

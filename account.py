@@ -9,7 +9,7 @@ class Account:
         :param amount: amount of deposit
         :return: returns True if successful or False if unsuccessful
         """
-        if amount >= 0:
+        if amount > 0:
             self.__account_balance += amount
             return True
         else:
@@ -42,3 +42,11 @@ class Account:
         :return: account name
         """
         return self.__account_name
+
+    # Just adding for the withdraw test for positive withdraws so it's not 0
+    def set_balance(self, amount) -> float:
+        """
+        Sets new account balance
+        :return: account balance
+        """
+        self.__account_balance = amount

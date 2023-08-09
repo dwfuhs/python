@@ -43,8 +43,8 @@ class Account:
         """
         return self.__account_name
 
-    # Just adding for the withdraw test for positive withdraws so it's not 0
-    def set_balance(self, amount) -> float:
+    # Just adding for the withdrawl test for positive withdraws so it's not 0
+    def set_balance(self, amount: float) -> None:
         """
         Sets new account balance
         :return: account balance

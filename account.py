@@ -4,6 +4,11 @@ class Account:
         self.__account_balance = 0
 
     def deposit(self, amount):
+        """
+        Adds amount of deposit to account balance
+        :param amount: amount of deposit
+        :return: returns True if successful or False if unsuccessful
+        """
         if amount >= 0:
             self.__account_balance += amount
             return True
@@ -11,6 +16,11 @@ class Account:
             return False
 
     def withdraw(self, amount):
+        """
+        Subtracts amount of withdraw from account balance
+        :param amount: amount of withdraw
+        :return: returns True if successful or False if unsuccessful
+        """
         if amount <= 0:
             return False
         elif amount >= self.__account_balance:
